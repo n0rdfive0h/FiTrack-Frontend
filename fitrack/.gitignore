@@ -4,6 +4,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
@@ -38,7 +39,7 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+node_modules
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -69,6 +70,17 @@ web_modules/
 .env
 .env.*
 !.env.example
+*.local
+
+# Build output
+dist
+dist-ssr
+.output
+
+# Vite files
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+.vite/
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -80,11 +92,8 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
-.output
 
 # Gatsby files
-.cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
@@ -137,13 +146,19 @@ dist
 !.yarn/sdks
 !.yarn/versions
 
-# Vite files
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
-.vite/
-
 # Astro generated types
 .astro/
 
 # Turbo Repo
 .turbo
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
